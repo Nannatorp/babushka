@@ -1,0 +1,28 @@
+img {
+  width: 100%;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.valgt {
+  background-color: orange;
+}
+button {
+  margin: 15px 2px 15px 2px;
+  background-color: white;
+  border-radius: 5px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: gray;
+  color: white;
+}
