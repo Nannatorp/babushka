@@ -26,3 +26,15 @@ footer {
   background-color: gray;
   color: white;
 }
+#modal {
+  width: 100vw;
+  height: 1000vh;
+  display: fixed;
+  background-color: #00000055;
+  display: none;
+}
+#modal article {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+}
