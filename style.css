@@ -13,6 +13,7 @@ button {
   margin: 15px 2px 15px 2px;
   background-color: white;
   border-radius: 5px;
+  font-family: superclarendon, serif;
 }
 nav {
   display: flex;
@@ -27,14 +28,22 @@ footer {
   color: white;
 }
 #modal {
+  display: none;
   width: 100vw;
   height: 1000vh;
   display: fixed;
-  background-color: #00000055;
-  display: none;
+  background-color: white;
 }
 #modal article {
   max-width: 900px;
-  margin: auto;
+  margin: 2em auto;
   background-color: white;
+}
+
+h1,
+h2 {
+  font-family: gastromond, sans-serif;
+}
+p {
+  font-family: superclarendon, serif;
 }
