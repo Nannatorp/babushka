@@ -11,7 +11,7 @@ const template = document.querySelector("template").content;
 let filter = "alle";
 let data;
 const h1 = document.querySelector("h1");
-const modal = document.querySelector("#modal");
+// const modal = document.querySelector("#modal");
 
 const filterKnapper = document.querySelectorAll("nav button");
 console.log(filterKnapper);
@@ -48,26 +48,33 @@ function vis(json) {
       klon.querySelector(".pris").textContent = "Pris: " + mad.pris + ",-";
       klon.querySelector("img").src = "img/" + mad.billednavn + "-md.jpg";
 
-      klon
-        .querySelector("article")
-        .addEventListener("click", () => visDetaljer(mad));
+      klon.querySelector("article").addEventListener("click", () => {
+        location.href = `singleview.html?id=${mad._id}`;
+      }); //sender til en anden side
+
+      //   klon
+      //     .querySelector("article")
+      //     .addEventListener("click", () => visDetaljer(mad));
 
       section.appendChild(klon);
     }
   });
 }
 
-function visDetaljer(mad) {
-  console.log(mad);
+// function visDetaljer(mad) {
+//   console.log(mad);
 
-  modal.style.display = "block";
+//   modal.style.display = "block";
 
-  modal.querySelector("h2").textContent = mad.navn;
-  modal.querySelector(".info").textContent = mad.kortbeskrivelse;
-  modal.querySelector(".pris").textContent = "Pris: " + mad.pris + ",-";
-  modal.querySelector("img").src = "img/" + mad.billednavn + "-md.jpg";
-}
+//   modal.querySelector("h2").textContent = mad.navn;
+//   modal.querySelector(".info").textContent = mad.kortbeskrivelse;
+//   modal.querySelector(".info_2").textContent = mad.langbeskrivelse;
+//   modal.querySelector(".info_3").textContent =
+//     "Oprindelsesregion: " + mad.oprindelsesregion;
+//   modal.querySelector(".pris").textContent = "Pris: " + mad.pris + ",-";
+//   modal.querySelector("img").src = "img/" + mad.billednavn + "-md.jpg";
+// }
 
-modal.addEventListener("click", () => (modal.style.display = "none"));
+// modal.addEventListener("click", () => (modal.style.display = "none"));
 
 hentData();
