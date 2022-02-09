@@ -74,3 +74,12 @@ article {
   box-shadow: 10px 10px 5px #aaaaaa;
   cursor: pointer;
 }
+#singleview {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 10px 10px 20px 10px;
+  /* border: 1px solid #bfbfbf; */
+  background-color: snow;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  cursor: inherit;
+}
