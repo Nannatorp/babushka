@@ -78,3 +78,28 @@ function vis(json) {
 // modal.addEventListener("click", () => (modal.style.display = "none"));
 
 hentData();
+
+//burger menu
+
+const btn = document.querySelector(".toggle-btn");
+const nav = document.querySelector(".navi");
+
+function toggleMenu() {
+  // Toggle en klasse på nav vha. classList.toggle
+  // Toggle en klasse, der hedder "shown"
+  nav.classList.toggle("shown");
+  // variabel, der hedder menuShown
+  // Den viser at nav-variablen indeholder klassen "shown" vha. classList.contains("")
+  const menuShown = nav.classList.contains("shown");
+
+  if (menuShown) {
+    // hvis nav har klassen "shown", er btn.textContent "Luk"
+    btn.textContent = "Luk";
+  } else {
+    // hvis IKKE nav har klassen "shown", er btn.textContent "Menu"
+    btn.textContent = "≡";
+  }
+}
+
+// klik-event til btn, der sætter toggleMenu-funktionen i gang
+btn.addEventListener("click", toggleMenu);
